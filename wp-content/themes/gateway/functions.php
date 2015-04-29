@@ -50,8 +50,10 @@ function gateway_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'gateway' ),
-	) );
+	'primary' => __( 'Primary Menu','gateway' ),
+	'footer' => __( 'Footer Menu', 'gateway' ),  // Footer menu
+    'social' => __( 'Social Menu', 'gateway' ),   // If you want to use a social menu
+    ) );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
