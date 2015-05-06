@@ -25,7 +25,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 // modules
 @import "modules/header";
+@import "modules/footer";
 
 
 @import "typography/text";
 @import "typography/headings";
+
+
+
+@import "templates/home";

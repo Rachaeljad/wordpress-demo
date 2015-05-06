@@ -1,0 +1,11 @@
+
+.hero{
+	padding: 10em;
+	text-align:center;
+	color: white;
+	@include background-image(scroll);
+}
+
+.services{
+	
+}
