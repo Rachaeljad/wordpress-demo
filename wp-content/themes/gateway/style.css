@@ -287,4 +287,24 @@ body {
   html.touch .hero {
     background-attachment: scroll !important; }
 
+.services {
+  padding: 5em;
+  text-align: center; }
+  .services .service-icon {
+    height: 200px;
+    width: 200px; }
+
+.portfolio {
+  padding-top: 5em;
+  padding-bottom: 5em; }
+  .portfolio .port-image {
+    padding: 5em; }
+
+.portfolio-headline {
+  text-align: center;
+  color: #000; }
+
+.recent-blog {
+  padding: 5em; }
+
 /*# sourceMappingURL=style.css.map */

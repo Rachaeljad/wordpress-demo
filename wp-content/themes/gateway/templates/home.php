@@ -62,8 +62,8 @@ get_header();
         while ( $loop->have_posts() ) : $loop->the_post();
     ?>
 
-        <div class="column third" style="background-image: url(<?php the_field('portfolio_image'); ?>);">
-            <h3><?php the_title(); ?></h3>
+        <div class="column third"  style="background-image: url(<?php the_field('portfolio_image'); ?>);">
+            <h3 class="port-image"></h3>
             <a href="<?php the_permalink(); ?>">➞</a>
         </div>
 
