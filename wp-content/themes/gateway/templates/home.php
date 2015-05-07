@@ -25,7 +25,7 @@ get_header();
 
     		<?php
        			 $args = array( 
-            'post_type' => 'service',
+            'post_type' => 'services',
             'posts_per_page' => 3
         );
         $loop = new WP_Query( $args );
@@ -63,7 +63,7 @@ get_header();
     ?>
 
         <div class="column third"  style="background-image: url(<?php the_field('portfolio_image'); ?>);">
-            <h3 class="port-image"></h3>
+            <h3 class="port-image"><?php the_title(); ?></h3>
             <a href="<?php the_permalink(); ?>">➞</a>
         </div>
 

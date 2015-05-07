@@ -14,23 +14,32 @@
 }
 
 
-#site-navigation{
+#site-navigation {
 	float:right;
 
-	.menu-item{
-	 display: inline-block;
-	 margin-left: 1em;
-
-	 a{
-	  	color:white;
-	  	font-family:$serif;
-	  	font-weight: 100;
-	  	text-decoration: none;
-
-	  	&.hover{
-	  		color:darken $blue
-
-	  	}
-	  }
+	.menu {
+		margin: 0.5em 0 0;
 	}
- }
+
+	.menu-item {
+		display: inline-block;
+		margin-left: 1em;
+
+		a {
+			color: white;
+			font-family: $serif;
+			font-weight: 300;
+			font-size: 1.1em;
+			text-decoration: none;
+
+			&:hover {
+				color: darken($blue, 20%);
+			}
+		}
+	}
+}
+
+// Mobile Menu
+.menu-toggle {
+	display: none;
+}

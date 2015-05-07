@@ -242,16 +242,22 @@ th {
 
 #site-navigation {
   float: right; }
+  #site-navigation .menu {
+    margin: 0.5em 0 0; }
   #site-navigation .menu-item {
     display: inline-block;
     margin-left: 1em; }
     #site-navigation .menu-item a {
       color: white;
       font-family: "roboto slab", serif;
-      font-weight: 100;
+      font-weight: 300;
+      font-size: 1.1em;
       text-decoration: none; }
-      #site-navigation .menu-item a.hover {
-        color: darken blue; }
+      #site-navigation .menu-item a:hover {
+        color: #000099; }
+
+.menu-toggle {
+  display: none; }
 
 #colophon {
   background: #000;
@@ -305,6 +311,11 @@ body {
   color: #000; }
 
 .recent-blog {
-  padding: 5em; }
+  padding: 5em;
+  text-size: 20px; }
+
+.blog-headline {
+  text-align: center;
+  text-size: 100px; }
 
 /*# sourceMappingURL=style.css.map */

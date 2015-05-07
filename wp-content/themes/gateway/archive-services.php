@@ -9,38 +9,46 @@
 
 get_header(); ?>
 <!-- add your custom post type to you class content area -->
-	<div id="primary" class="content-area">     
+	<div id="primary" class="content-area services">     
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
-			<header>
-			<h2 class="portfolio-headline underline">Work</h2>
-			</header>	
+		
+			<h2 class="services-headline underline">Services</h2>
+				
 
 
-			<div class="row">
+			<!-- Begin Services -->
+    	<div class="row">
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+    		<?php
+       			 $args = array( 
+            'post_type' => 'services',
+            'posts_per_page' => 3
+        );
+        $loop = new WP_Query( $args );
+        while ( $loop->have_posts() ) : $loop->the_post();
+    ?>
 
-			<!-- add in your home page row and images -->
+        <div class="column third">
+            <img class="service-icon" src="<?php the_field('services_icon'); ?>">
+            <h3 class="service-title"><?php the_title(); ?></h3>
+            <p class="service-description"><?php the_field('service_text'); ?></p>
+        </div>
 
-			<div class="column third" style="background-image: url(<?php the_field('portfolio_feature_image'); ?>);">
-    		<div class="portfolio-color-overlay"></div>
-    		<h3 class="portfolio-title"><?php the_title(); ?></h3>
-    			<a class="portfolio-link" href="<?php the_permalink(); ?>"><span class="dashicons dashicons-arrow-right-alt"></span></a>
-    		</div>
+    <?php endwhile; ?>
+    <?php wp_reset_postdata(); ?>
 
-			<?php endwhile; ?>
+  </div>
 
-			
 
-		</div>
+    
 
-			<?php the_posts_navigation(); ?>
 
-		<?php endif; ?>
+<?php endif; ?>
+
+<!-- End Services -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
