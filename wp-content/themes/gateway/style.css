@@ -208,6 +208,9 @@ th {
   .row:after, .row:before {
     content: '';
     display: table; }
+  .row .row {
+    width: 100%;
+    max-width: 100%; }
 
 .column {
   float: left;
@@ -317,5 +320,17 @@ body {
 .blog-headline {
   text-align: center;
   text-size: 100px; }
+
+.portfolio-hero {
+  width: 100%; }
+
+.portfolio_image {
+  height: 10px; }
+
+.portfolio-headline underline {
+  text-size: 50px; }
+
+.portfolio-color-overlay {
+  padding: 10em; }
 
 /*# sourceMappingURL=style.css.map */
